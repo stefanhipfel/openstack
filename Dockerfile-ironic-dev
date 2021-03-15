@@ -1,0 +1,5 @@
+FROM keppel.eu-de-2.cloud.sap/ccloud/loci-ironic:train-latest
+
+RUN sudo apt-get update \
+    && sudo apt-get -y install libpython3-dev gcc
+RUN pip install --force-reinstall git+https://github.com/stefanhipfel/oslo.messaging@master#egg=oslo.messaging
